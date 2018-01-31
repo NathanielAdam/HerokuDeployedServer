@@ -1,7 +1,7 @@
 require('dotenv').config();
 var express = require('express');
 var app = express();
-var http = requre('http').Server(app);
+var http = require('http').Server(app);
 var bodyParser = require('body-parser');
 var sequelize = require('./db');
 var User= sequelize.import(__dirname + '\\models\\user')
