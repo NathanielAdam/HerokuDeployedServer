@@ -4,7 +4,7 @@ var app = express();
 var http = require('http').Server(app);
 var bodyParser = require('body-parser');
 var sequelize = require('./db');
-var User= sequelize.import(__dirname + '\\models\\user')
+var User= sequelize.import(__dirname + '/models/user')
 
 // build user model
    
