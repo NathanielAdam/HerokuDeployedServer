@@ -1,6 +1,7 @@
 require('dotenv').config();
 var express = require('express');
 var app = express();
+var http = requre('http').Server(app);
 var bodyParser = require('body-parser');
 var sequelize = require('./db');
 var User= sequelize.import(__dirname + '\\models\\user')
@@ -27,6 +28,6 @@ app.use('/api/test', function(req,res){
 });
 
 // open server on port 3000
-app.listen(3000, function(){
+http.listen(process.env.PORT || 3000, function(){
     console.log("app is open on 3000!")
 })

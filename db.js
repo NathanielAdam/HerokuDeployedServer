@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('workoutlog', 'postgres', 'disgr@cefuljellybean', {
-    host: 'localhost',
+var sequelize = new Sequelize(process.env.DATABASE_URL || 
+    'postgres://postgres:disgr@cefuljellybean@localhost5432/workoutlog', {
     dialect: 'postgres'
 });
 
