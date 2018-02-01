@@ -1,5 +1,3 @@
-import { log } from 'util';
-
 var router = require('express').Router();
 var sequelize = require('../db');
 var Log = sequelize.import('../models/log.js');
@@ -25,7 +23,7 @@ router.post('/', function(req, res) {
             
         },
             function createError(err){
-                console.log(log)
+                
                 res.send(500, err.message);
             }
     )
